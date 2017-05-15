@@ -150,7 +150,7 @@ You need the objectId value from above.
 Next, you need the role definition ID of the RBAC built-in role you want to grant access to the user, user group, or application. Typically you would want to use the "Owner" or "Contributor" or "Reader" role. The following command shows how to get the role definition ID for the "Owner" role:
 
 ```azurecli
-az role definition list --name owner
+az role definition list --name Owner
 ```
 
 Which returns the following output:
