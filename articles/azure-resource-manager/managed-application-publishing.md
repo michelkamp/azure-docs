@@ -109,6 +109,25 @@ The first step is to create the managed application package that contains the ma
 
 * The third file needed in the package is the **createUiDefinition.json**. The Azure portal uses this file to generate the user interface for consumers creating the managed application. You define the parameters for the managed application, and how consumers can get the input for each parameter. You can use options like a drop-down selector, text box, password box, and other input tools. To learn about creating a UI definition file for a managed application, see [Getting started with CreateUiDefinition](managed-application-createuidefinition-overview.md).
 
+* The last file to create is the file named "applianceDefinition.json:. This file contains the applicane description as follow
+{
+  "properties": {
+    "LockLevel": "None",
+    "DisplayName": "your display name",
+    "Description": "the description",
+    "PackageFileUri": "https://<your strorage account>.blob.core.windows.net/test/SingleVMDefinition.zip",
+    "Authorizations": [
+      {
+        "principalId": "<GUID>",
+        "roleDefinitionId": "<GUID>"
+      }
+    ]
+  },
+    "location": "West Central US"
+}
+
+
+
 Once all the needed files are ready, you upload the package to an accessible location from where it can be consumed.
 
 
